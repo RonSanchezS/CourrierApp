@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">register</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Crear nuevo usuario</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-input
+      type="text"
+      placeholder="Nombre de usuario"
+      [(ngModel)]="username"
+      required="required"
+    ></ion-input>
+
+    <ion-input
+      type="text"
+      placeholder="Correo Electronico"
+      [(ngModel)]="email"
+      required="required"
+    ></ion-input>
+
+    <ion-input
+      type="password"
+      placeholder="Contraseña"
+      [(ngModel)]="password"
+      required="required"
+    ></ion-input>
+  </ion-card>
+
+  <ion-button
+    (click)="register()"
+    expand="block"
+    fill="clear"
+    shape="round"
+  >Register</ion-button>
+</ion-content>
